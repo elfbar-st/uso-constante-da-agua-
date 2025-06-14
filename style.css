@@ -1,0 +1,485 @@
+style.css
+/* style.css */
+
+/* Importação de Fontes */
+body {
+    margin: 0;
+    font-family: 'Roboto', Arial, sans-serif; /* Usando Roboto agora */
+    box-sizing: border-box;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8; /* Um cinza claro para o fundo */
+}
+
+/* Estilos Globais para Títulos e Parágrafos */
+h1, h2, h3 {
+    color: #2e7d32; /* Um verde mais escuro para títulos */
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* Containers para Centralizar Conteúdo */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Botões */
+.btn-primary {
+    display: inline-block;
+    background-color: #4CAF50; /* Verde vibrante */
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #388E3C; /* Um verde mais escuro ao passar o mouse */
+    transform: translateY(-2px);
+}
+
+/* --- Header e Navbar (Reutilizado do exemplo anterior, com pequenos ajustes) --- */
+header {
+    background-color: #4CAF50; /* Verde vibrante */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    color: white;
+    font-size: 1.8em;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.logo:hover {
+    color: #a5d6a7; /* Um tom mais claro de verde */
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: white;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #c8e6c9; /* Um tom mais claro de verde */
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin-bottom: 5px;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* --- Seções do Main --- */
+
+/* Seção Hero (Banner Principal) */
+.hero-section {
+    background: linear-gradient(rgba(76, 175, 80, 0.8), rgba(60, 150, 60, 0.8)), url('https://via.placeholder.com/1500x600?text=Fundo+de+Água') no-repeat center center/cover;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px; /* Altura mínima para o banner */
+    position: relative;
+}
+
+.hero-section .hero-content {
+    max-width: 800px;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+.hero-section h1 {
+    font-size: 3.2em;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.hero-section p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+}
+
+.hero-section .hero-image {
+    position: absolute; /* Posiciona a imagem acima do fundo */
+    bottom: 20px;
+    right: 20px;
+    width: 300px; /* Tamanho da imagem no banner */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.hero-section .hero-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+/* Seções de Informação Padrão */
+.info-section {
+    padding: 60px 20px;
+    background-color: #ffffff; /* Fundo branco */
+    text-align: center;
+}
+
+/* Seções de Informação Alternadas (para contraste) */
+.alt-info-section {
+    padding: 60px 20px;
+    background-color: #e8f5e9; /* Um verde claro suave */
+    text-align: center;
+}
+
+/* Estilo para Cards */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    width: 280px; /* Largura fixa para os cards */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #4CAF50;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* Conteúdo em Linha (para Desafios Atuais) */
+.content-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+    text-align: left; /* Alinha o texto à esquerda dentro da coluna */
+}
+
+.content-row .text-content {
+    flex: 1; /* Permite que o texto ocupe o espaço disponível */
+    min-width: 300px; /* Largura mínima para evitar quebra em telas pequenas */
+    max-width: 500px;
+}
+
+.content-row .text-content ul {
+    list-style: disc inside;
+    padding-left: 0;
+}
+
+.content-row .text-content li {
+    margin-bottom: 10px;
+}
+
+.content-row .image-content {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    text-align: center;
+}
+
+.content-row .image-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Calculadora de Impacto */
+.calculator-box {
+    background-color: #f0f4c3; /* Um amarelo/verde bem claro */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    max-width: 500px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.calculator-box label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #558B2F; /* Verde mais escuro */
+}
+
+.calculator-box input[type="number"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+/* Formulário do Mural da Água e Contato */
+.mural-form, .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 40px auto 20px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.mural-form textarea, .contact-form textarea,
+.mural-form input[type="text"], .contact-form input[type="text"],
+.contact-form input[type="email"] {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.mural-form textarea, .contact-form textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+}
+
+.dicas-comunidade {
+    margin-top: 30px;
+    border-top: 1px dashed #ccc;
+    padding-top: 20px;
+}
+
+.dica-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-left: 5px solid #81c784; /* Um verde suave para o destaque */
+    margin-bottom: 15px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+/* Lista de Recursos */
+.resource-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.resource-list li {
+    margin-bottom: 15px;
+}
+
+.resource-list a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.resource-list a:hover {
+    color: #2e7d32;
+    text-decoration: underline;
+}
+
+/* Links Sociais */
+.social-links {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.social-links a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-links img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.1);
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #a5d6a7;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* --- Responsividade (Mantido do exemplo anterior, com ajustes) --- */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #4CAF50;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 20px;
+        text-align: center;
+    }
+
+    .nav-links a {
+        padding: 10px 0;
+        display: block;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .nav-links li:last-child a {
+        border-bottom: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Ajustes para telas menores */
+    .hero-section {
+        padding: 60px 15px;
+        min-height: 400px;
+    }
+
+    .hero-section h1 {
+        font-size: 2.2em;
+    }
+
+    .hero-section p {
+        font-size: 1em;
+    }
+
+    .hero-section .hero-image {
+        position: static; /* Remove o posicionamento absoluto em telas menores */
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    .cards-container {
+        flex-direction: column; /* Cards em coluna em telas menores */
+        align-items: center;
+    }
+
+    .card {
+        width: 90%; /* Ocupa a maior parte da largura */
+        max-width: 350px; /* Limita a largura máxima */
+    }
+
+    .content-row {
+        flex-direction: column; /* Conteúdo em coluna */
+    }
+
+    .content-row .text-content,
+    .content-row .image-content {
+        max-width: 100%; /* Ocupa a largura total */
+    }
+}
